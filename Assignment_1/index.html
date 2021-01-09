@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Assignment 1</title>
+        <link rel="stylesheet" href="mystyle.css">
+        <script src="myscript.js"></script>
+    </head>
+    <body>
+        <img src="assets/ideaboardz.png" alt="ideaboardz" class="logo">
+        <div class="whiteboard">
+            <h1>User</h1>
+            <div class="sections">
+                <div class='section section1 oneThird' id='section1'>
+                    <div class='sectionTitleArea'>
+                        <h4 class='sectionTitle'>Title 1</h4>
+                        <button class='addStickyButton' title='Add Sticky' onclick="writeNote('1')">+</button>
+                    </div>
+                    <div class="points" id='points1'>
+                        <div class="sticky">
+                        <div class="stickyText" id='note1_1' onclick="editNote('1','note1_1')">Hi firste</div>
+                        <div class="voteCount">
+                            <span class="count" style="float: left;" id='vote1_1'>+ 2</span>
+                            <span style="float: right;" onclick="addVote('vote1_1')">Like</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class='addStickyForm hide'id='stickyForm1'>
+                        <textarea class='stickyForm' cols='30' data-board-id='3583213' data-board-name='Sunil Salve' maxlength='140' rows='4'></textarea>
+                    </div>
+                </div>
+                <div class="section section2 oneThird" id='section2'>
+                    <div class='sectionTitleArea'>
+                        <h4 class='sectionTitle'>Title 2</h4>
+                        <button class='addStickyButton' title='Add Sticky' onclick="writeNote('2')">+</button>
+                    </div>
+                    <div class="points" id='points2'>
+                        <div class="sticky">
+                        <div class="stickyText" id='note2_1' onclick="editNote('2','note2_1')">Hi secondye</div>
+                        <div class="voteCount">
+                        <span class="count" style="float: left;" id='vote2_1'>+ 2</span>
+                        <span style="float: right;" onclick="addVote('vote2_1')">Like</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class='addStickyForm hide' id='stickyForm2'>
+                        <textarea class='stickyForm' cols='30' data-board-id='3583213' data-board-name='Sunil Salve' maxlength='140' rows='4'></textarea>
+                    </div>
+                </div>
+                <div class="section section3 oneThird" id='section3'>
+                    <div class='sectionTitleArea'>
+                        <h4 class='sectionTitle'>Title 3</h4>
+                        <button class='addStickyButton' title='Add Sticky' onclick="writeNote('3')">+</button>
+                    </div>
+                    <div class="points" id='points3'>
+                        <div class="sticky">
+                        <div class="stickyText" id='note3_1' onclick="editNote('3','note3_1')">Hi thirdbye</div>
+                        <div class="voteCount">
+                            <span class="count" style="float: left;" id='vote3_1'>+ 2</span>
+                            <span style="float: right;" onclick="addVote('vote3_1')">Like</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class='addStickyForm hide' id='stickyForm3'>
+                        <textarea class='stickyForm' cols='30' maxlength='140' rows='4'></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id='editFormOverlay' hidden>
+            <div class="ui-dialog" style="display: block; z-index: 1; outline: 0px; height: auto; width: auto; top: 40%; left: 40%;">
+                <div class='editStickyForm '>
+                    <textarea class='editStickyForm' id='editStickyForm' cols='40' maxlength='140' rows='15'></textarea>
+                </div>
+            </div>
+            <div class="ui-widget-overlay" onclick="saveEdits()"></div>
+        </div>
+    </body>
+</html>
