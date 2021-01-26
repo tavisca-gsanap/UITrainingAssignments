@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: lightgrey;
+  }
+  
+  .section1 .points .sticky,
+  .section1 .addStickyForm .stickyForm
+  {
+      background-color: greenyellow;
+  }
+  
+  .section2 .points .sticky,
+  .section2 .addStickyForm .stickyForm{
+    background-color: yellow;
+  }
+  
+  .section3 .points .sticky,
+  .section3 .addStickyForm .stickyForm{
+    background-color: burlywood;
+  }

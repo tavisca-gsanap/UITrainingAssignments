@@ -1,0 +1,35 @@
+.sectionTitleArea {
+    overflow: auto;
+    width: 100%;
+    padding: 0 0 0.5em 0;
+  }
+  .sectionTitle {
+    margin: 0.2em 0;
+    font-weight: bold;
+    display: inline;
+  }
+  .hide {
+    display: none;
+  }
+  .stickyForm{
+    max-width: 15em;
+    word-wrap: break-word;
+    cursor: pointer;
+    float: left;
+    width: 47%;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    margin: 2px;
+}
+
+ .addStickyForm{
+    overflow: visible;
+    width: 100%;
+  }
+  .addStickyForm textarea {
+    -moz-box-shadow: 5px 1px 3px #888888;
+    -webkit-box-shadow: 5px 1px 3px #888888;
+    box-shadow: 5px 1px 3px #888888;
+    /*	filter:e(%("progid:DXImageTransform.Microsoft.Shadow(color= %s, Direction=%s, Strength=%s)", @color, @offset, @blur))*/
+  }

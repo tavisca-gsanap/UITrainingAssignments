@@ -1,0 +1,23 @@
+<img src="../assets/ideaboardz.png" alt="ideaboardz" class="logo">
+<div class="whiteboard">
+    <h1>User</h1>
+    <div class="sections">
+        <div class='section section1 oneThird' id='section1'>
+            <app-section sectionId="1"></app-section>
+        </div>
+        <div class="section section2 oneThird" id='section2'>
+            <app-section sectionId="2"></app-section>
+        </div>
+        <div class="section section3 oneThird" id='section3'>
+            <app-section sectionId="3"></app-section>
+        </div>
+    </div>
+</div>
+<div id='editFormOverlay' hidden>
+    <div class="ui-dialog" style="display: block; z-index: 1; outline: 0px; height: auto; width: auto; top: 40%; left: 40%;">
+        <div class='editStickyForm '>
+            <textarea class='editStickyForm' id='editStickyForm' cols='40' maxlength='140' rows='15'></textarea>
+        </div>
+    </div>
+    <div class="ui-widget-overlay" onclick="saveEdits()"></div>
+</div>
