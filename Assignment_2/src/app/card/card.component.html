@@ -1,9 +1,9 @@
 <div class="points" id='points1'>
     <div class="sticky">
-    <div class="stickyText" id='{{ card.id}}' onclick="editNote('1','note1_1')">{{ card.text}}{{ card.id}}</div>
+    <div class="stickyText" id='{{ card.id}}' (click)="editNote()">{{ card.text}}</div>
     <div class="voteCount">
-        <span class="count" style="float: left;" id='vote1_1'>+ {{ card.voteCount}}</span>
-        <span style="float: right;" onclick="addVote('vote1_1')">Like</span>
+        <span class="count" style="float: left;">+ {{ card.voteCount}}</span>
+        <button style="float: right;" (click)="card.addVote()">Like</button>
     </div>
     </div>
 </div>

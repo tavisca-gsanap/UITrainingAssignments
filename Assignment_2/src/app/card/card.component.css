@@ -5,12 +5,12 @@
   .stickyText{
     height: 100px;
     width: 100%;
+    cursor: pointer;
     padding-bottom: 2px;
   }
   .sticky, .stickyText{
     max-width: 15em;
     word-wrap: break-word;
-    cursor: pointer;
     text-align: center;
     float: left;
     overflow: hidden;

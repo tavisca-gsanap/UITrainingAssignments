@@ -19,3 +19,30 @@
     overflow: auto;
   }
 
+  .editStickyForm{
+    max-width: 90%;
+    word-wrap: break-word;
+    cursor: pointer;
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 2px;
+  }
+  
+.editStickyForm{
+  overflow: visible;
+  width: 100%;
+}
+.editStickyForm textarea {
+  -moz-box-shadow: 5px 1px 3px #888888;
+  -webkit-box-shadow: 5px 1px 3px #888888;
+  box-shadow: 5px 1px 3px #888888;
+  /*	filter:e(%("progid:DXImageTransform.Microsoft.Shadow(color= %s, Direction=%s, Strength=%s)", @color, @offset, @blur))*/
+}
+.ui-widget-overlay { background: #fff; opacity: .80;filter:Alpha(Opacity=80); }
+.ui-widget-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+.ui-dialog { position: absolute; padding: .2em; width: 300px; overflow: hidden; }
+
