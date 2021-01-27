@@ -1,9 +1,11 @@
 <div class='sectionTitleArea'>
-    <h4 class='sectionTitle'>Title 1</h4>
+    <h4 class='sectionTitle'>{{sectionId}}</h4>
     <button class='addStickyButton' title='Add Sticky' (click)="hidewWriteNote=false;">+</button>
 </div>
 <div *ngFor="let card of cards;">
-    <app-card [card]="card"></app-card>
+    <ng-container *ngIf="card.text">
+        <app-card [card]="card"></app-card>
+    </ng-container>
 </div>
 
 <div class='addStickyForm' [hidden]="hidewWriteNote" id='stickyForm1'>

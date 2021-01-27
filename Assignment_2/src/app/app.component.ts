@@ -51,7 +51,6 @@ export class AppComponent {
     this.currentCard.text = box.value;
   }
 
-
   // showEdit(){
   //   this.store.dispatch({type:"Show"})
   // }

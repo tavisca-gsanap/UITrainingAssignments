@@ -18,6 +18,7 @@
         <div class='editStickyForm'>
             <textarea class='editStickyForm {{currentSection}}' [ngModel]="currentCard.text" #box id='editStickyForm' cols='40' maxlength='140' rows='15'></textarea>
         </div>
+        <h3>For deleting just clear all</h3>
     </div>
     <div class="ui-widget-overlay" (click)="saveText(box)"></div>
 </div>
