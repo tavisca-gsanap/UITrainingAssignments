@@ -19,7 +19,6 @@ export class AppComponent {
 
   text:string = "default";
   // hideEditNote$ : Observable<Boolean>
-  public currentSection = "one"
   hideEditNote:boolean;
   subscription: Subscription;
   subscription1: Subscription;
