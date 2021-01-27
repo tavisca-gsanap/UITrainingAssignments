@@ -23,7 +23,7 @@ export class SectionComponent implements OnInit {
 
   onEnter(box: any) { 
     this.notesCount += 1;
-    let cardId = "note"+ this.sectionId +"_" +this.notesCount;
+    let cardId = "note_"+ this.sectionId +"_" +this.notesCount;
     let card = new CardStickyNote(cardId , box.value, 0);
     this.cards.push(card)
     console.log(box.value); 
