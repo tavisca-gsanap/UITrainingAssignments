@@ -23,13 +23,15 @@ export class AppComponent {
   hideEditNote:boolean;
   subscription: Subscription;
   subscription1: Subscription;
-  currentCard : string;
+  // currentCard : string;
+  currentCard:CardStickyNote;
 
   constructor(private data: CommonService) { }
 
   ngOnInit() {
     this.subscription = this.data.currentMessage.subscribe(hideEditNote => this.hideEditNote = hideEditNote);
-    this.subscription1 = this.data.currentCard.subscribe(cardId => this.currentCard = cardId);
+    // this.subscription1 = this.data.currentCard.subscribe(cardId => this.currentCard = cardId);
+    this.subscription1 = this.data.currentCard.subscribe(card => this.currentCard = card);
   }
 
   ngOnDestroy() {
@@ -43,14 +45,10 @@ export class AppComponent {
 
   title = 'my-app';
 
-  saveText() { 
+  saveText(box:any) { 
     this.hideEditNote = true;
-    this.currentCard = "";
-  }
-
-  changeText(hide: boolean) { 
-    console.log(hide);
-
+    // this.currentCard = "";
+    this.currentCard.text = box.value;
   }
 
 

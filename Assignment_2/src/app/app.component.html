@@ -16,8 +16,8 @@
 <div id='editFormOverlay'  [hidden]="hideEditNote">
     <div class="ui-dialog" style="display: block; z-index: 1; outline: 0px; height: auto; width: auto; top: 40%; left: 40%;">
         <div class='editStickyForm'>
-            <textarea class='editStickyForm {{currentSection}}' [ngModel]="currentCard" #box id='editStickyForm' cols='40' maxlength='140' rows='15'></textarea>
+            <textarea class='editStickyForm {{currentSection}}' [ngModel]="currentCard.text" #box id='editStickyForm' cols='40' maxlength='140' rows='15'></textarea>
         </div>
     </div>
-    <div class="ui-widget-overlay" (click)="saveText()"></div>
+    <div class="ui-widget-overlay" (click)="saveText(box)"></div>
 </div>
