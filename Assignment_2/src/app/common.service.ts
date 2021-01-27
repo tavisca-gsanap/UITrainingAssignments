@@ -18,12 +18,12 @@ export class CommonService {
     this.messageSource.next(hideEditNote)
   }
 
-  private cardSource = new BehaviorSubject(CardStickyNote);
+  private cardSource = new BehaviorSubject("note_one_1");
   currentCard = this.cardSource.asObservable();
 
-  public card = new CardStickyNote("as","avsvsau",0);
+  public card = "note_one_1";
 
-  changeCard(card = CardStickyNote) {
+  changeCard(card : string) {
     this.cardSource.next(card)
   }
 

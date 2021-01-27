@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Store } from '@ngrx/store';
+//import { Store } from '@ngrx/store';
 import { Observable, Subscription } from 'rxjs';
 import { CommonService } from '../common.service';
 
@@ -25,21 +25,26 @@ export class CardComponent implements OnInit {
     //this.card = new CardStickyNote(this.sectionId +"_1", "DemoText of section "+ this.sectionId, 0);
     hideEditNote:boolean;
     subscription: Subscription;
+    currentCard:string;
+    subscription1:Subscription;
   
     constructor(private data: CommonService) { }
   
     ngOnInit() {
-      this.subscription = this.data.currentMessage.subscribe(hideEditNote => this.hideEditNote = hideEditNote)
+      this.subscription = this.data.currentMessage.subscribe(hideEditNote => this.hideEditNote = hideEditNote);
+      this.subscription1 = this.data.currentCard.subscribe(cardId => this.currentCard = cardId);
     }
   
     ngOnDestroy() {
       this.subscription.unsubscribe();
+      this.subscription1.unsubscribe();
     }
 
   editNote(){
     // this.store.dispatch({type:"Show"})
     this.data.changeMessage(false);
     this.currentSection = this.sectionId;
+    this.data.changeCard(this.card.text);
     // console.log(this.hideEditNote);
   }
 

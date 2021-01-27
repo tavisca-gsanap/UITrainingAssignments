@@ -1,4 +1,5 @@
 
+/*
 import { Action } from '@ngrx/store';
 
 
@@ -15,3 +16,4 @@ export function reducer(  state: boolean = true,  action: Action) {
       return state;
   }
 }
+*/
